@@ -1,0 +1,17 @@
+server:
+  port: 8001
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://123.56.106.192:3306/springcloud?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.floatpoint.springcloud.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
