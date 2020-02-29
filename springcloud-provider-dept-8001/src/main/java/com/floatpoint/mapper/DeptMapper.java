@@ -1,6 +1,6 @@
-package com.floatpoint.springcloud.mapper;
+package com.floatpoint.mapper;
 
-import com.floatpoint.springcloud.entity.Dept;
+import com.floatpoint.entity.Dept;
 
 public interface DeptMapper {
     int deleteByPrimaryKey(Integer deptno);

@@ -1,0 +1,5 @@
+server:
+  port: 80
+
+url:
+  prexfix: http://localhost:8001 # 请求地址前缀

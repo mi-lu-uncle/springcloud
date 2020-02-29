@@ -1,13 +1,15 @@
-package com.floatpoint.springcloud.entity;
+package com.floatpoint.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
+
 @Data
 @Accessors(chain = true)
 @NoArgsConstructor
-public class Dept {
+public class Dept implements Serializable {//基于微服务调用的都必须序列化
     /**
      * 部门编号
      */
@@ -22,10 +24,4 @@ public class Dept {
      * 数据库标识
      */
     private String dbSource;
-
-    public Dept(Integer deptno, String deptname, String dbSource) {
-        this.deptno = deptno;
-        this.deptname = deptname;
-        this.dbSource = dbSource;
-    }
 }
