@@ -8,6 +8,8 @@ spring:
     url: jdbc:mysql://123.56.106.192:3306/springcloud?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
+  application:
+    name: provider-dept
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
@@ -15,3 +17,20 @@ mybatis:
   configuration:
     map-underscore-to-camel-case: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#eureka配置
+eureka:
+  client:
+    service-url:
+      #defaultZone: http://localhost:7001/eureka/
+      defaultZone: http://eureka7002:7002/eureka/,http://eureka7001:7001/eureka/,http://eureka7003:7003/eureka/
+  instance:
+    instance-id: provider-dept-8001 #自定义服务名称信息
+    prefer-ip-address: true #访问路径可以显示ip地址信息，window电脑如果不配置的话那么就会显示电脑名称
+
+#info信息
+info:
+  app.name: springcloud-demo
+  company.name: floatpoint-tec
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
