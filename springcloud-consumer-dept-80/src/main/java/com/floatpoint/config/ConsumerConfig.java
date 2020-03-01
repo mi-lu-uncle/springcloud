@@ -1,5 +1,6 @@
 package com.floatpoint.config;
 
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
@@ -13,8 +14,10 @@ public class ConsumerConfig {
    * @return
    */
   @Bean
+  @LoadBalanced  //@LoadBalanced开启以别名方式去Eureka读取注册信息，然后本地实现rpc远程调用
   public RestTemplate restTemplate(){
     return new RestTemplate();
   }
+
 
 }
