@@ -1,5 +1,7 @@
 package com.floatpoint.config;
 
+import com.netflix.loadbalancer.IRule;
+import com.netflix.loadbalancer.RandomRule;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,5 +21,10 @@ public class ConsumerConfig {
     return new RestTemplate();
   }
 
+    //直接注入一个负载均衡策略，替代默认的轮询策略
+//  @Bean
+//  public IRule getRule(){
+//    return new RandomRule();//返回一个随机算法，替代默认的轮询算法。
+//  }
 
 }
