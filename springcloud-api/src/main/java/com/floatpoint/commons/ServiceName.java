@@ -3,7 +3,7 @@ package com.floatpoint.commons;
 import java.io.Serializable;
 
 /**
- * 此类定义微服务提供者的地址
+ * 此类定义微服务提供者的地址:ribbon使用
  */
 public class ServiceName implements Serializable {
 

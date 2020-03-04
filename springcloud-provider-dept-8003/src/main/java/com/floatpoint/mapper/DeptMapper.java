@@ -1,7 +1,9 @@
 package com.floatpoint.mapper;
 
 import com.floatpoint.entity.Dept;
+import org.springframework.stereotype.Component;
 
+@Component
 public interface DeptMapper {
     int deleteByPrimaryKey(Integer deptno);
 
