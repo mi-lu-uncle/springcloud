@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
  * 消费者内部是不需要service层的，直接消费提供者
  */
 @RestController
-@RequestMapping("/consumer")
+//@RequestMapping("/consumer")
 @Slf4j
 public class DeptController_consumer {
 

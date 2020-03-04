@@ -16,7 +16,7 @@ public class ConsumerConfig {
    * @return
    */
   @Bean
-  @LoadBalanced  //@LoadBalanced开启以别名方式去Eureka读取注册信息，然后本地实现rpc远程调用
+  @LoadBalanced  //@LoadBalanced开启以别名方式去Eureka读取注册信息，,ribbon是客户端，实现负载均衡的工具。
   public RestTemplate restTemplate(){
     return new RestTemplate();
   }

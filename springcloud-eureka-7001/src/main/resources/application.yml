@@ -6,7 +6,11 @@ eureka:
   instance:
     hostname: eureka7001 # Eureka服务端的实例名称
   client:
-    register-with-eureka: false #表示是否向eureka注册中心注册自己
+    # 是否向注册中心注册自己，缺省：true
+    # 一般情况下，Eureka服务端是不需要再注册自己的
+    register-with-eureka: false
+    # 是否从Eureka获取注册信息，缺省：true
+    # 一般情况下，Eureka服务端是不需要的
     fetch-registry: false #如果为false，表示自己是注册中心
     service-url:
       #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址（单机）。

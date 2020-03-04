@@ -1,4 +1,4 @@
-package com.myrule;
+package com.floatpoint.config;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;
@@ -12,10 +12,11 @@ import org.springframework.context.annotation.Configuration;
  */
 //参考地址：https://my.oschina.net/hmilyylimh/blog/1539507
 @Configuration
+@ExcludeFromComponentScan
 public class MySelfRule {
 
   @Bean
-  public IRule getRule(){
+  public IRule ribbonRule(){
     return new RandomRule();//随机算法。
   }
 }
