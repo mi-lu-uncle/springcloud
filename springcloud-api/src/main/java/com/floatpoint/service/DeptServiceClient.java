@@ -2,6 +2,7 @@ package com.floatpoint.service;
 
 import com.floatpoint.dto.DeptDto;
 import com.floatpoint.entity.Dept;
+import com.floatpoint.service.fallbackfactory.DeptServiceClientFallBackFactory;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
@@ -10,7 +11,8 @@ import org.springframework.web.bind.annotation.*;
  * feign使用
  */
 @Component
-@FeignClient(value = "PROVIDER-DEPT")//指定要调用的微服务名称
+//@FeignClient(value = "PROVIDER-DEPT")//指定要调用的微服务名称，
+@FeignClient(value = "PROVIDER-DEPT",fallbackFactory = DeptServiceClientFallBackFactory.class)//配置降级处理类
 @RequestMapping("/dept")
 public interface DeptServiceClient {
 

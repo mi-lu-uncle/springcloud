@@ -18,4 +18,23 @@ public class DeptController {
     return deptService.getDeptByNo(no);
   }
 
+  @PostMapping("/add")
+  public String addDept(@RequestBody DeptDto dto){
+
+    int i = deptService.addDept(dto);
+    if ( i == 1){
+      return "add fail";
+    }
+    return "add successful";
+  }
+
+  @GetMapping("/delete/{no}")
+  public String deleteDeptByNo(@PathVariable("no") int no){
+    int i = deptService.deleteDeptBy(no);
+    if ( i == 1){
+      return "delete fail";
+    }
+    return "delete successful";
+  }
+
 }

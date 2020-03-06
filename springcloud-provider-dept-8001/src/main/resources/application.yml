@@ -5,9 +5,9 @@ spring:
   datasource:
     username: root
     password: 123456
-    url: jdbc:mysql://123.56.106.192:3306/springcloud-01?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://123.56.106.192:3306/springcloud-01?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
   application:
     name: PROVIDER-DEPT #微服务的Application名字 PROVIDER-DEPT。
 
