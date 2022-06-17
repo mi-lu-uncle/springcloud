@@ -29,7 +29,7 @@
         <spring.cloud.version>Greenwich.SR1</spring.cloud.version>
         <mybatis.generator.version>1.4.0</mybatis.generator.version>
         <swagger2.version>2.9.2</swagger2.version>
-        <fastjson.version>1.2.62</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <poi.version>4.1.2</poi.version>
         <weixin.sdk.version>3.6.0</weixin.sdk.version>
         <druid.version>1.1.21</druid.version>
