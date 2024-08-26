@@ -28,7 +28,7 @@
         <spring.boot.version>2.1.4.RELEASE</spring.boot.version>
         <spring.cloud.version>Greenwich.SR1</spring.cloud.version>
         <mybatis.generator.version>1.4.0</mybatis.generator.version>
-        <swagger2.version>2.9.2</swagger2.version>
+        <swagger2.version>2.10.0</swagger2.version>
         <fastjson.version>1.2.62</fastjson.version>
         <poi.version>4.1.2</poi.version>
         <weixin.sdk.version>3.6.0</weixin.sdk.version>
